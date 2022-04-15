@@ -6,20 +6,66 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-
+    interface JaumeButton {
+    }
+    interface JaumeHeader {
+    }
+    interface JaumeLogo {
+        "height": number;
+        "logo": string;
+        "name": string;
+        "width": number;
+    }
 }
 declare global {
+    interface HTMLJaumeButtonElement extends Components.JaumeButton, HTMLStencilElement {
+    }
+    var HTMLJaumeButtonElement: {
+        prototype: HTMLJaumeButtonElement;
+        new (): HTMLJaumeButtonElement;
+    };
+    interface HTMLJaumeHeaderElement extends Components.JaumeHeader, HTMLStencilElement {
+    }
+    var HTMLJaumeHeaderElement: {
+        prototype: HTMLJaumeHeaderElement;
+        new (): HTMLJaumeHeaderElement;
+    };
+    interface HTMLJaumeLogoElement extends Components.JaumeLogo, HTMLStencilElement {
+    }
+    var HTMLJaumeLogoElement: {
+        prototype: HTMLJaumeLogoElement;
+        new (): HTMLJaumeLogoElement;
+    };
     interface HTMLElementTagNameMap {
+        "jaume-button": HTMLJaumeButtonElement;
+        "jaume-header": HTMLJaumeHeaderElement;
+        "jaume-logo": HTMLJaumeLogoElement;
     }
 }
 declare namespace LocalJSX {
+    interface JaumeButton {
+    }
+    interface JaumeHeader {
+    }
+    interface JaumeLogo {
+        "height"?: number;
+        "logo"?: string;
+        "name"?: string;
+        "width"?: number;
+    }
     interface IntrinsicElements {
+        "jaume-button": JaumeButton;
+        "jaume-header": JaumeHeader;
+        "jaume-logo": JaumeLogo;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "jaume-button": LocalJSX.JaumeButton & JSXBase.HTMLAttributes<HTMLJaumeButtonElement>;
+            "jaume-header": LocalJSX.JaumeHeader & JSXBase.HTMLAttributes<HTMLJaumeHeaderElement>;
+            "jaume-logo": LocalJSX.JaumeLogo & JSXBase.HTMLAttributes<HTMLJaumeLogoElement>;
         }
     }
 }
