@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'jaume-button',
@@ -6,7 +6,16 @@ import { Component, h } from '@stencil/core';
   scoped: true,
 })
 export class JaumeButton {
+  @Prop() isSecondary = false;
+
+  get buttonClasses() {
+    let classes = 'button';
+    classes += this.isSecondary ? ' is-secondary' : '';
+    return classes;
+  }
+
   render() {
-    return <button class="button">Currículum</button>;
+    console.log(this.buttonClasses);
+    return <button class={this.buttonClasses}>Currículum</button>;
   }
 }

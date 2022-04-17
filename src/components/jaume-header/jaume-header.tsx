@@ -11,6 +11,7 @@ export class JaumeHeader {
       <header class="header">
         <jaume-logo></jaume-logo>
         <jaume-button></jaume-button>
+        <jaume-button isSecondary={true}></jaume-button>
       </header>
     );
   }

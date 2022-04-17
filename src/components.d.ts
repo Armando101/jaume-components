@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface JaumeButton {
+        "isSecondary": boolean;
     }
     interface JaumeHeader {
     }
@@ -44,6 +45,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface JaumeButton {
+        "isSecondary"?: boolean;
     }
     interface JaumeHeader {
     }
