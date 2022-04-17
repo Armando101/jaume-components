@@ -15,3 +15,17 @@
   color: var(---primary);
   border: 2px solid var(---primary);
 }
+
+.button-icon {
+  padding: 0.625rem;
+  border-radius: 4px;
+  border: 2px solid var(---primary);
+  cursor: pointer;
+  background-color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-icon img {
+  vertical-align: middle;
+}

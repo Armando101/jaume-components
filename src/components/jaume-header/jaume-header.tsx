@@ -10,8 +10,8 @@ export class JaumeHeader {
     return (
       <header class="header">
         <jaume-logo></jaume-logo>
-        <jaume-button></jaume-button>
-        <jaume-button isSecondary={true}></jaume-button>
+        <jaume-button message="Currículum"></jaume-button>
+        <jaume-button message="Currículum" isSecondary={true}></jaume-button>
       </header>
     );
   }

@@ -7,7 +7,22 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface JaumeButton {
+        /**
+          * Alt name for accessibility
+         */
+        "altName": string;
+        /**
+          * Icon to be render, this only applies if its an icon button
+         */
+        "icon": string;
+        /**
+          * If its a secondary of primary button
+         */
         "isSecondary": boolean;
+        /**
+          * Legend to render in button
+         */
+        "message": string;
     }
     interface JaumeHeader {
     }
@@ -45,7 +60,22 @@ declare global {
 }
 declare namespace LocalJSX {
     interface JaumeButton {
+        /**
+          * Alt name for accessibility
+         */
+        "altName"?: string;
+        /**
+          * Icon to be render, this only applies if its an icon button
+         */
+        "icon"?: string;
+        /**
+          * If its a secondary of primary button
+         */
         "isSecondary"?: boolean;
+        /**
+          * Legend to render in button
+         */
+        "message"?: string;
     }
     interface JaumeHeader {
     }
