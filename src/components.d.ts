@@ -6,20 +6,145 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-
+    interface JaumeButton {
+        /**
+          * Alt name for accessibility
+         */
+        "altName": string;
+        "color": string;
+        /**
+          * If its a secondary of primary button
+         */
+        "isSecondary": boolean;
+        /**
+          * Legend to render in button
+         */
+        "message": string;
+    }
+    interface JaumeHeader {
+    }
+    interface JaumeIcon {
+        "color": string;
+        "name": string;
+        "redirectTo": string;
+        "svg": string;
+    }
+    interface JaumeLogo {
+        "height": number;
+        "logo": string;
+        "name": string;
+        "width": number;
+    }
+    interface JaumeSocialIcons {
+    }
+    interface JaumeSvg {
+        "color": string;
+        "name": string;
+        "svg": string;
+    }
 }
 declare global {
+    interface HTMLJaumeButtonElement extends Components.JaumeButton, HTMLStencilElement {
+    }
+    var HTMLJaumeButtonElement: {
+        prototype: HTMLJaumeButtonElement;
+        new (): HTMLJaumeButtonElement;
+    };
+    interface HTMLJaumeHeaderElement extends Components.JaumeHeader, HTMLStencilElement {
+    }
+    var HTMLJaumeHeaderElement: {
+        prototype: HTMLJaumeHeaderElement;
+        new (): HTMLJaumeHeaderElement;
+    };
+    interface HTMLJaumeIconElement extends Components.JaumeIcon, HTMLStencilElement {
+    }
+    var HTMLJaumeIconElement: {
+        prototype: HTMLJaumeIconElement;
+        new (): HTMLJaumeIconElement;
+    };
+    interface HTMLJaumeLogoElement extends Components.JaumeLogo, HTMLStencilElement {
+    }
+    var HTMLJaumeLogoElement: {
+        prototype: HTMLJaumeLogoElement;
+        new (): HTMLJaumeLogoElement;
+    };
+    interface HTMLJaumeSocialIconsElement extends Components.JaumeSocialIcons, HTMLStencilElement {
+    }
+    var HTMLJaumeSocialIconsElement: {
+        prototype: HTMLJaumeSocialIconsElement;
+        new (): HTMLJaumeSocialIconsElement;
+    };
+    interface HTMLJaumeSvgElement extends Components.JaumeSvg, HTMLStencilElement {
+    }
+    var HTMLJaumeSvgElement: {
+        prototype: HTMLJaumeSvgElement;
+        new (): HTMLJaumeSvgElement;
+    };
     interface HTMLElementTagNameMap {
+        "jaume-button": HTMLJaumeButtonElement;
+        "jaume-header": HTMLJaumeHeaderElement;
+        "jaume-icon": HTMLJaumeIconElement;
+        "jaume-logo": HTMLJaumeLogoElement;
+        "jaume-social-icons": HTMLJaumeSocialIconsElement;
+        "jaume-svg": HTMLJaumeSvgElement;
     }
 }
 declare namespace LocalJSX {
+    interface JaumeButton {
+        /**
+          * Alt name for accessibility
+         */
+        "altName"?: string;
+        "color"?: string;
+        /**
+          * If its a secondary of primary button
+         */
+        "isSecondary"?: boolean;
+        /**
+          * Legend to render in button
+         */
+        "message"?: string;
+    }
+    interface JaumeHeader {
+    }
+    interface JaumeIcon {
+        "color"?: string;
+        "name"?: string;
+        "redirectTo"?: string;
+        "svg"?: string;
+    }
+    interface JaumeLogo {
+        "height"?: number;
+        "logo"?: string;
+        "name"?: string;
+        "width"?: number;
+    }
+    interface JaumeSocialIcons {
+    }
+    interface JaumeSvg {
+        "color"?: string;
+        "name"?: string;
+        "svg"?: string;
+    }
     interface IntrinsicElements {
+        "jaume-button": JaumeButton;
+        "jaume-header": JaumeHeader;
+        "jaume-icon": JaumeIcon;
+        "jaume-logo": JaumeLogo;
+        "jaume-social-icons": JaumeSocialIcons;
+        "jaume-svg": JaumeSvg;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "jaume-button": LocalJSX.JaumeButton & JSXBase.HTMLAttributes<HTMLJaumeButtonElement>;
+            "jaume-header": LocalJSX.JaumeHeader & JSXBase.HTMLAttributes<HTMLJaumeHeaderElement>;
+            "jaume-icon": LocalJSX.JaumeIcon & JSXBase.HTMLAttributes<HTMLJaumeIconElement>;
+            "jaume-logo": LocalJSX.JaumeLogo & JSXBase.HTMLAttributes<HTMLJaumeLogoElement>;
+            "jaume-social-icons": LocalJSX.JaumeSocialIcons & JSXBase.HTMLAttributes<HTMLJaumeSocialIconsElement>;
+            "jaume-svg": LocalJSX.JaumeSvg & JSXBase.HTMLAttributes<HTMLJaumeSvgElement>;
         }
     }
 }
